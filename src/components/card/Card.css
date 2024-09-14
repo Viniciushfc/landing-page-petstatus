@@ -1,0 +1,76 @@
+/* Geral */
+#cards {
+  padding: 2rem 1rem;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #185519;
+}
+
+.flex {
+  display: flex;
+  gap: 1rem;
+  justify-content: center; /* Centraliza os cartões horizontalmente */
+  flex-wrap: wrap; /* Permite que os cartões envolvam para a próxima linha, se necessário */
+}
+
+/* Estilos dos cartões */
+.card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%; /* Torna o cartão responsivo */
+  max-width: 300px; /* Define um tamanho máximo para os cartões */
+  margin: 1rem; /* Espaçamento ao redor dos cartões */
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin: 0;
+  color: #333;
+}
+
+.card-description {
+  font-size: 1rem;
+  color: #666;
+  margin: 0.5rem 0;
+}
+
+.card-actions {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .flex {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .flex {
+    flex-direction: column; 
+    align-items: center; 
+  }
+
+  .card {
+    max-width: 100%; 
+  }
+}
