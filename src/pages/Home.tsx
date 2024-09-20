@@ -10,16 +10,16 @@ import Menu from '../assets/images/Menu.svg';
 import Logo from "../assets/images/logo.svg";
 import { useEffect, useState } from "react";
 import Button from "../components/Button";
-import Card from "../components/card/Card"; // Importa o componente Card
+import Card from "../components/card/Card";
 
 export default function Home() {
     const [showMobileMenu, setShowMobileMenu] = useState(false);
 
-    useEffect(() =>{
-        if(showMobileMenu){
+    useEffect(() => {
+        if (showMobileMenu) {
             document.documentElement.style.overflowY = "hidden"
         } else {
-             document.documentElement.style.overflowY = "auto"
+            document.documentElement.style.overflowY = "auto"
         }
     })
 
@@ -38,8 +38,8 @@ export default function Home() {
                         </ul>
                     </div>
                     <div className="desktop-only">
-                        <div className="flex items-center">
-                        <a className="reverse-color ml-lg link" href="#">Login</a>
+                        <div className="flexx items-center">
+                            <a className="link-login ml-lg link" href="#">Login</a>
                             <Button text="Cadastre-se" />
                         </div>
                     </div>
@@ -75,7 +75,6 @@ export default function Home() {
                 </span>
                 <img src={HeroRectangleOne} alt="Retangulo dois tela inicial" />
                 <div className="container content">
-                    <p className="desktop-only">Seja Bem-vindo!</p>
                     <h1>Cuidamos do seu pet com carinho e atenção. Confie em quem entende de animais!</h1>
                     <p>Oferecemos serviços especializados para garantir a saúde e o bem-estar do seu animalzinho. Seu pet merece o melhor cuidado!</p>
                     <div className="flex gap-1">

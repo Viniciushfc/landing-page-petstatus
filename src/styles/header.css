@@ -39,6 +39,9 @@
     font-size: var(--fs-lg);
 }
 
+.link-login{
+    color: black;
+}
 
 @media (width >=1280px) {
     header {
