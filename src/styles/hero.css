@@ -1,6 +1,6 @@
 :root{
     /* -COLORS- */
-    --primaryColor: #4df555;
+    --primaryColor: #448a16;
     --secondaryColor: #b4fc7c;
     --tercearyColor: #fdffd0;
     --backgourndColor: #fff;
@@ -33,7 +33,7 @@
 #hero {
     background: var(--light-gray);
     border-top: 0.125rem solid #e4e4e4;
-    height: 90vh;
+    height: 80vh;
     display: flex;
 }
 

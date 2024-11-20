@@ -11,6 +11,12 @@ import Logo from "../assets/images/logo.svg";
 import { useEffect, useState } from "react";
 import Button from "../components/Button";
 import Card from "../components/card/Card";
+import ContactForm from "../components/contactForm/ContactForm";
+import "../styles/footer.css"
+import "../styles/content1.css"
+import Chat from "../assets/images/chat.png"
+import People from "../assets/images/people.png"
+import Money from "../assets/images/money.png"
 
 export default function Home() {
     const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -38,7 +44,7 @@ export default function Home() {
                         </ul>
                     </div>
                     <div className="desktop-only">
-                        <div className="flexx items-center">
+                        <div className="flexx align-items">
                             <a className="link-login ml-lg link" href="#">Login</a>
                             <Button text="Cadastre-se" />
                         </div>
@@ -109,6 +115,65 @@ export default function Home() {
                     />
                 </div>
             </section>
+
+            <div className="project-content">
+                <h1>Sobre nosso Produto!</h1>
+                <div className="cards">
+                    <div className="card">
+                        <img src={Chat} alt="chat" className="icon-card" />
+                        <p>
+                            Temos um atendimento de suporte ao tutor totalmente online e rapido.
+                        </p>
+                    </div>
+                    <div className="card">
+                        <img src={People} alt="people" className="icon-card" />
+                        <p>
+                            Sempre visando a segurança do seus pequenos.
+                        </p>
+                    </div>
+                    <div className="card">
+                        <img src={Money} alt="money" className="icon-card" />
+                        <p>
+                            Utilizamos produtos de alta qualidade.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <ContactForm />
+            </div>
+
+
+            <footer>
+                <div className="footer-div">
+                    <div className="logos">
+                        <a href="">
+                            <img src={Logo} alt="" />
+                        </a>
+                    </div>
+                    <div className="recurso">
+                        <div className="empresas">
+                            <h2>Empresa</h2>
+                            <a href="">Sobre nós</a>
+                            <a href="">Faça parte do time</a>
+                            <a href="">Blog</a>
+                        </div>
+                        <div className="funcionalidades">
+                            <h2>Funcionalidade</h2>
+                            <a href="">Marketing</a>
+                            <a href="">Análise de Dados</a>
+                        </div>
+                        <div className="recursos">
+                            <h2>Recursos</h2>
+                            <a href="">IOS & Android</a>
+                            <a href="">Teste a Demo</a>
+                            <a href="">Clientes</a>
+                            <a href="">API</a>
+                        </div>
+                    </div>
+                </div>
+                <p className="final-span">Feito com muito amor nas aulas de Programação Web S2 @2024 PetStatus - Todos os direitos reservados!</p>
+            </footer>
         </>
     );
 }

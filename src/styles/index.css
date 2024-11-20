@@ -9,14 +9,14 @@
 :root {
     --bg-color: #FFF;
     --primary-color: #448a16;
-    --secondary-color: #B2E3FF;
+    --secondary-color: #448a16;
     --text-color: #000000;
     --secondary-text-color: #737373;
-    --light-gray: #F8F8F8;  
-    --light-text-color: #FFF;
+    --light-gray: #F8F8F8;
+    --light-text-color: #FFF;
 
-    
-    --ff-sans: "Montserrat", system-ui, sans-serif; 
+
+    --ff-sans: "Montserrat", system-ui, sans-serif;
     --fw-base: 400;
     --fw-md: 500;
     --fw-bold: 800;
@@ -49,7 +49,9 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     line-height: 1.2;
     color: var(--text-color);
     font-weight: var(--fw-bold);
@@ -88,12 +90,17 @@ ul {
     list-style: none;
 }
 
-.flexx{
+.flexx {
     display: flex;
+    align-items: center;
+}
+
+.gap-gap {
+    justify-content: space-between;
 }
 
 
-@media (width >= 1280px) {
+@media (width >=1280px) {
     :root {
         --fs-lg: 2rem;
         --fs-xl: 2.625rem;
@@ -105,4 +112,109 @@ ul {
         --py-xl: 5rem;
         --pg-lg: 2rem;
     }
+
+    #testimonials {
+        height: 100vh;
+        background: var(--secondary-color);
+        display: flex;
+        flex-direction: column;
+        padding-block: 4rem;
+        gap: 2rem;
+
+        header {
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            gap: 1.5rem;
+            padding-inline: 2rem;
+            align-items: center;
+        }
+
+        header :first-child {
+            color: var(--primary-color);
+            font-weight: var(--fw-bold);
+        }
+
+        p {
+            color: var(--second-text-color);
+        }
+
+        .carousel {
+            display: flex;
+            width: 80%;
+        }
+
+        .carousel:hover {
+            .carousel-content {
+                animation-play-state: paused;
+                cursor: pointer;
+            }
+        }
+
+        .carousel-content {
+            display: flex;
+            gap: 1.5rem;
+            padding-right: 1.5rem;
+            animation: swipe 30000ms linear infinite;
+        }
+
+        .carousel-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 12.5rem;
+            background: var(--bg-color);
+            border-radius: 0.375rem;
+            padding: 1.625rem;
+            text-align: center;
+            gap: 1rem;
+
+            >img {
+                width: 130px;
+                height: 130px;
+                border-radius: 50%;
+            }
+
+            .rating {
+                display: flex;
+                margin-top: auto;
+            }
+
+            .names {
+                font-size: var(--fs-sm);
+                font-weight: var(--fw-bold);
+            }
+
+            .names :first-child {
+                color: var(--text-color);
+                font-size: var(--fs-base);
+            }
+
+        }
+    }
+
+    @media (width >= 580px) {
+        #testimonials {
+          gap: 5rem;
+          align-items: center;
+      
+          header p {
+            width: 60%;
+          }
+      
+          .carousel {
+            overflow-x: hidden;
+            width: 50%;
+          }
+      
+          .testimony {
+            width: 80%;
+          }
+      
+          .carousel-card {
+            min-width: 30rem;
+            min-height: 26.875rem;
+          }
+        }
+      }
 }
