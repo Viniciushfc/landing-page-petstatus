@@ -17,8 +17,9 @@ import "../styles/content1.css"
 import Chat from "../assets/images/chat.png"
 import People from "../assets/images/people.png"
 import Money from "../assets/images/money.png"
-import Testimonials from "../components/testimonials/testimonials";
+
 import "../styles/testimonials.css"
+import Testimonials from "../components/testimonials/testimonials";
 
 export default function Home() {
     const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -117,8 +118,10 @@ export default function Home() {
                     />
                 </div>
             </section>
+            <div>
+                <Testimonials />
+            </div>
 
-            <Testimonials />
 
             <div className="project-content">
                 <h1>Sobre nosso Produto!</h1>
