@@ -5,7 +5,7 @@ import Cachorro2 from "../../assets/images/cachorro2.jpg";
 import Cachorro3 from "../../assets/images/cachorro3.jpg";
 import Cachorro4 from "../../assets/images/cachorro4.jpg";
 
-export const Testimonials = () => {
+export default function Testimonials()  {
     return (
         <section id="testimonials">
             <header>
