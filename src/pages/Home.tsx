@@ -17,9 +17,8 @@ import "../styles/content1.css"
 import Chat from "../assets/images/chat.png"
 import People from "../assets/images/people.png"
 import Money from "../assets/images/money.png"
-
 import "../styles/testimonials.css"
-import Testimonials from "../components/testimonials/testimonials";
+import Testimonials from "../components/testimonials/testimonial";
 
 export default function Home() {
     const [showMobileMenu, setShowMobileMenu] = useState(false);
